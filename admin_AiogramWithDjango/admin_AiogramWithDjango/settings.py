@@ -13,9 +13,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 
 import sys
+
 sys.path.append("..")
 sys.path.append(".")
-#from data import PGUSER, PGPASSWORD, DATABASE, DBHOST
+# from data import PGUSER, PGPASSWORD, DATABASE, DBHOST
 from data import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -35,7 +36,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'usersmanage',
+    'admin_AiogramWithDjango.usersmanage',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'admin_AiogramWithDjango.urls'
+ROOT_URLCONF = 'admin_AiogramWithDjango.admin_AiogramWithDjango.urls'
 
 TEMPLATES = [
     {
@@ -72,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'admin_AiogramWithDjango.wsgi.application'
+WSGI_APPLICATION = 'admin_AiogramWithDjango.admin_AiogramWithDjango.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
