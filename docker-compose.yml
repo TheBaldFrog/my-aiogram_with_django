@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  db:
+    container_name: database
+    image: postgres:16.3
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ubotdb
+      POSTGRES_PASSWORD: botdb1
+      POSTGRES_DB: botdb
+    volumes:
+      - ./db-data/:/var/lib/postgresql/data/
+    networks:
+      - botnet
+    restart: on-failure
+
+
+networks:
+  botnet:
+    driver: bridge
